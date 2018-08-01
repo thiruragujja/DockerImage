@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<Configuration status="INFO" packages="com.mindtree.*">
+	<Appenders>
+		 <RollingFile name="logFile"
+			fileName ="D:/logs/Spring201.log"
+			filePattern="D:/logs/Spring201.log-%d{yyyy-MM-dd}.log"> 
+			<PatternLayout>
+				<Pattern>%d %p %c{2.} [%t] %m %n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="logFile" level="INFO" />
+		</Root>
+	</Loggers>
+</Configuration>
