@@ -131,7 +131,7 @@ body {
 					var $res = $('#result');
 
 					toAppend += '<option id= "ids">'
-							+ currEmp.employeeId + ","
+							+ currEmp.empId + ","
 							+ currEmp.name + '</option>';
 					$('#result').append(toAppend);
 					index++;
