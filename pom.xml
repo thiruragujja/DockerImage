@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mindtree</groupId>
 	<artifactId>Spring201</artifactId>
-	<version>SNAPSHOT.01</version>
-	<packaging>war_DockerImage</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 
 	<properties>
 		<spring-version>4.2.4.RELEASE</spring-version>
@@ -13,13 +13,7 @@
 		<aggregate.report.dir>tests/target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
     		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
-  <distributionManagement>
-        <snapshotRepository>
-      <id>nexus</id>
-      <url>http://192.168.1.185:8081/repository/Maven_Demo/</url>
-   </snapshotRepository>
-  </distributionManagement>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -108,21 +102,6 @@
           <artifactId>sonar-maven-plugin</artifactId>
           <version>3.6.0.1398</version>
         </plugin>
-	<plugin>
-      <groupId>org.jacoco</groupId>
-      <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.4</version>
-      <executions>
-        <execution>
-          <id>report</id>
-          <goals>
-            <goal>report-aggregate</goal>
-          </goals>
-          <phase>verify</phase>
-        </execution>
-      </executions>
-    </plugin>
-				
 				<plugin>
 					<artifactId>maven-war-plugin</artifactId>
 					<version>2.4</version>
@@ -134,28 +113,4 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
-	  <profiles>
-    <profile>
-      <id>coverage</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>prepare-agent</id>
-                <goals>
-                  <goal>prepare-agent</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
 </project>
