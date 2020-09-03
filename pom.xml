@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mindtree</groupId>
 	<artifactId>Spring201</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<version>SNAPSHOT.01</version>
+	<packaging>war_DockerImage</packaging>
 
 	<properties>
 		<spring-version>4.2.4.RELEASE</spring-version>
