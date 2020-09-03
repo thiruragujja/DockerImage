@@ -13,7 +13,13 @@
 		<aggregate.report.dir>tests/target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
     		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
-
+  <distributionManagement>
+        <snapshotRepository>
+      <id>nexus</id>
+      <url>http://192.168.1.185:8081/repository/Maven_Demo/</url>
+   </snapshotRepository>
+  </distributionManagement>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
